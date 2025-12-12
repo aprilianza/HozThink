@@ -89,35 +89,6 @@ export function Advantages() {
             </motion.div>
           ))}
         </div>
-
-        {/* Stats Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-20 grid md:grid-cols-4 gap-8 max-w-5xl mx-auto"
-        >
-          {[
-            { number: '200+', label: 'Projects Delivered' },
-            { number: '95%', label: 'Client Satisfaction' },
-            { number: '50+', label: 'Industry Experts' },
-            { number: '15+', label: 'Years Experience' }
-          ].map((stat, index) => (
-            <div key={stat.label} className="text-center">
-              <motion.div
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
-                className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 mb-2"
-              >
-                {stat.number}
-              </motion.div>
-              <p className="text-slate-400">{stat.label}</p>
-            </div>
-          ))}
-        </motion.div>
       </div>
     </section>
   );
