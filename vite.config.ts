@@ -3,7 +3,10 @@
   import react from '@vitejs/plugin-react-swc';
   import path from 'path';
 
-  export default defineConfig({
+  const repoBase = '/HozThink/';
+
+  export default defineConfig(() => ({
+    base: process.env.GITHUB_ACTIONS ? repoBase : '/',
     plugins: [react()],
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
@@ -57,4 +60,4 @@
       port: 3000,
       open: true,
     },
-  });
+  }));
