@@ -62,7 +62,7 @@ export function Navigation() {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <a href="#" className="flex items-center gap-3">
-            <img src="/images/HozThink_Logo.png" alt="HozThink Logo" className="h-10 w-auto" />
+            <img src={`${import.meta.env.BASE_URL}images/HozThink_Logo.png`} alt="HozThink Logo" className="h-10 w-auto" />
             <span className="text-2xl text-white">
               HozThink<span className="text-blue-500">!</span>
             </span>
